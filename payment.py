@@ -108,7 +108,7 @@ def pay(id):
                     headers={'Content-Type': 'application/json'})
             app.logger.info('order history returned {}'.format(req.status_code))
         except requests.exceptions.RequestException as err:
-            app.logger.error(err)
+            app.logger.error('error in payment')
             return str(err), 500
 
     # delete cart

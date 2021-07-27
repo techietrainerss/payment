@@ -4,6 +4,8 @@ import os
 
 class Publisher:
     HOST = os.getenv('AMQP_HOST', 'rabbitmq')
+    MQ_USER = os.getenv('MQ_USER', 'guest')
+    MQ_PASS = os.getenv('MQ_PASS', 'guest')
     VIRTUAL_HOST = '/'
     EXCHANGE='robot-shop'
     TYPE='direct'
