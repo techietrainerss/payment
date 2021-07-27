@@ -132,8 +132,9 @@ def queueOrder(order):
     time.sleep(delay / 1000)
 
     headers = {}
+    app.logger.info('before publish')
     publisher.publish(order, headers)
-
+    app.logger.info('after publish')
 
 def countItems(items):
     count = 0
